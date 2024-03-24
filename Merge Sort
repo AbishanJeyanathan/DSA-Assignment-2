@@ -1,6 +1,9 @@
 import os
 from playsound import playsound
 
+swap_sound_file = "Swap.mp3"
+merge_sound_file = "Merge.mp3"
+
 def mergeSort(arr):
     if len(arr) > 1:
         halfpoint = len(arr)//2
@@ -11,5 +14,38 @@ def mergeSort(arr):
         mergeSort(r) 
 
         x = y = z = 0
+
+def mergeSort(arr):
+    if len(arr) > 1:
+        halfpoint = len(arr)//2
+        l = arr[:halfpoint]
+        r = arr[halfpoint:]
+        
+        mergeSort(l)
+        mergeSort(r) 
+
+        x = y = z = 0
+
+        while x < len(l) and y < len(r):
+            if l[x] < r[y]:
+                arr[z] = l[x]
+                x += 1
+                play_swap_sound()
+            else:
+                arr[z] = r[y]
+                y += 1
+                play_swap_sound()
+            z += 1
+
+        while x < len(l):
+            arr[z] = l[x]
+            x += 1
+            z += 1
+
+        while y < len(r):  # Fixed the loop condition here
+            arr[z] = r[y]  # Previously using z here was causing an index error
+            y += 1
+            z += 1
+
 
 
