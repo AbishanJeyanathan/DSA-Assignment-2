@@ -1,2 +1,17 @@
 import os
 from playsound import playsound
+
+swap_sound_file = "swap_sound.wav"
+merge_sound_file = "merge_sound.wav"
+
+def mergeSort(arr):
+    if len(arr) > 1:
+        x = len(arr)//2
+        l = arr[:a]
+        r = arr[a:]
+        
+        mergeSort(l)
+        mergeSort(r) 
+
+        y = z = a = 0
+
