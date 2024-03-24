@@ -42,8 +42,8 @@ def mergeSort(arr):
             x += 1
             z += 1
 
-        while y < len(r):  # Fixed the loop condition here
-            arr[z] = r[y]  # Previously using z here was causing an index error
+        while y < len(r):
+            arr[z] = r[y]  
             y += 1
             z += 1
 
